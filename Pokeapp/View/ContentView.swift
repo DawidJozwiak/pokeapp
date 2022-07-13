@@ -16,7 +16,9 @@ struct ContentView: View {
             ZStack {
                 Image("landscape").resizable().aspectRatio(contentMode: .fill).edgesIgnoringSafeArea(.all)
                 VStack {
-                    Image("pokemon-logo").resizable().frame(width: 356.0, height: 200.0, alignment: .top)
+                    Image("pokemon-logo")
+                        .resizable()
+                        .frame(width: 325.0, height: 200.0, alignment: .top)
                         .scaleEffect(isAnimating ? 1 : 0)
                         .animation(Animation.easeOut(duration: 2), value: isAnimating)
                         .onAppear {
